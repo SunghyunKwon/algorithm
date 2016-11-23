@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define MAX_ASCII_COUNT 255
+#define MAX_ASCII_COUNT 256
 
 bool check_duplicated_string(char *string)
 {
@@ -13,7 +13,7 @@ bool check_duplicated_string(char *string)
     }
 
     int i = 0;
-    char temp_buffer[255] = {0};
+    char temp_buffer[256] = {0};
     
     for (i = 0; i < string_len; i++) {
         if (temp_buffer[string[i]] >= 1) {
@@ -29,7 +29,7 @@ bool check_duplicated_string(char *string)
 
 void main()
 {
-    char string[255] = {0, };
+    char string[1000] = {0, };
 
     printf("Input the string : ");
     scanf("%s", string);

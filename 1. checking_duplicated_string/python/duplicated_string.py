@@ -1,9 +1,9 @@
 #!/usr/bin/python
 def check_duplicated_string(input_string):
-    if len(input_string) > 255:
+    if len(input_string) > 256:
         return False
 
-    array = [0 for _ in xrange(255)]
+    array = [0 for _ in xrange(256)]
     for char in input_string:
         if array[ord(char)] >= 1:
             return False
